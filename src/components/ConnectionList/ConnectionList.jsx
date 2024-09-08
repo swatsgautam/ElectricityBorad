@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
 import { useConnections } from '../../context/connectionContext'
-import { formatDateFromExcelSerial } from '../../Utils/DateUtils';
 import { statusOptions, ownershipOptions, categoryOptions, reviewerCommentsOptions } from '../../Utils/options';
 import { filterConnections } from '../../Utils/filterConnectionUtils';
-import { calculatePagination, handlePageChange } from '../../Utils/paginationUtils'; 
+import { calculatePagination } from '../../Utils/paginationUtils'; 
 import ConnectionRows from '../ConnectionRows/ConnectionRows';
 import PaginationControls from '../PaginationControls/PaginationControls';
 import { reviewers } from '../../Utils/reviewers';

@@ -1,6 +1,4 @@
 import React from 'react'
-
-import {Link} from 'react-router-dom' 
 import './HomePage.css'
 import SearchBar from '../SearchBar/SearchBar'
 import DateFilter from '../DateFilter/DateFilter'
