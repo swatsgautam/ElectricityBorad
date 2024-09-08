@@ -4,7 +4,7 @@ import { getStatusClassName } from '../../Utils/StatusUtils';
 import {getStateDistrictPincodeValue, handleCombinedInputChange, handleReviewerChange} from '../../Utils/connectionUtils'
 import './ConnectionRows.css'
 
-const ConnectionRows = ({ con, editingConnection,reviewers, statusOptions,reviewerCommentsOptions, ownershipOptions, categoryOptions, handleEditClick, handleChange, handleSave, handleCancel }) => {
+const ConnectionRows = ({ con, editingConnection,reviewers, statusOptions,reviewerCommentsOptions, ownershipOptions, categoryOptions, handleEditClick, handleChange, handleSave, handleCancel, handleViewClick }) => {
   
   return (
         <tr key={con.ID}>
@@ -148,7 +148,7 @@ const ConnectionRows = ({ con, editingConnection,reviewers, statusOptions,review
           }
         </td>
         <td>{formatDateFromExcelSerial(con.Date_of_Application)}</td>
-        <td>{formatDateFromExcelSerial(con.Date_of_Approval)}</td>
+        <td>{con.Date_of_Approval ? formatDateFromExcelSerial(con.Date_of_Approval) : ''}</td>
         <td>{formatDateFromExcelSerial(con.Modified_Date)}</td>        
         <td>{con.GovtID_Type}</td>
         <td>
@@ -179,7 +179,10 @@ const ConnectionRows = ({ con, editingConnection,reviewers, statusOptions,review
               <button className="btn-cancel" onClick={handleCancel}>Cancel</button>
             </>
             ) : (
-              <button className="btn-edit" onClick={() => handleEditClick(con)}>Edit</button>
+              <>                
+                <button className="btn-edit" onClick={() => handleEditClick(con)}>Edit</button>
+                <button className="btn-view" onClick={() => handleViewClick(con)}>View</button>
+              </>
             )
           }
         </td>

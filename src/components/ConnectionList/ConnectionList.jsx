@@ -6,6 +6,7 @@ import { calculatePagination } from '../../Utils/paginationUtils';
 import ConnectionRows from '../ConnectionRows/ConnectionRows';
 import PaginationControls from '../PaginationControls/PaginationControls';
 import { reviewers } from '../../Utils/reviewers';
+import Popup from '../Popup/Popup'
 import './ConnectionList.css'
 
 const ConnectionList = () => {
@@ -13,6 +14,7 @@ const ConnectionList = () => {
   const [currentPage, setCurrentPage] = useState(1); //Manages the current page number for pagination and Function to update currentPage
   const recordsPerPage = 50; //Sets the number of records per page
   const [editingConnection, setEditingConnection] = useState(null); //Holds the currently edited connection (initially null) & Function to update editingConnection
+  const [viewConnection, setViewConnection] = useState(null); // State for popup
   const [error, setError] = useState('');
       
   const filteredConnections = filterConnections(connections, searchTerm, startDate, endDate);
@@ -28,7 +30,12 @@ const ConnectionList = () => {
 
     const handleEditClick = (con) => {
       setEditingConnection(con); //Sets the editingConnection state with the connection that the user wants to edit
+      setViewConnection(null); // Close the popup when editing
       setError('');
+    };
+
+    const handleViewClick = (con) => {
+      setViewConnection(con);
     };
 
     const handleChange = (event) => {
@@ -62,6 +69,9 @@ const ConnectionList = () => {
     const handleCancel = () => {
       setEditingConnection(null);
       setError('');
+    };
+    const handleClosePopup = () => {
+      setViewConnection(null);
     };
 
   return (
@@ -103,6 +113,7 @@ const ConnectionList = () => {
                 handleChange={handleChange}
                 handleSave={handleSave}
                 handleCancel={handleCancel}
+                handleViewClick={handleViewClick}
               />
             ))}
         </tbody>
@@ -114,6 +125,7 @@ const ConnectionList = () => {
            />
       </div>
       {error && <div className="error-message">{error}</div>}
+      {viewConnection && <Popup connection={viewConnection} onClose={handleClosePopup} />}
     </div>
   )
 }
