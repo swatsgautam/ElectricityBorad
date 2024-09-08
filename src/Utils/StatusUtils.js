@@ -11,4 +11,4 @@ export const getStatusClassName = (status) => {
         default:
             return '';
     }
-  };
+};

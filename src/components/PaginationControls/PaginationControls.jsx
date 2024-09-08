@@ -3,7 +3,7 @@ import './PaginationControls.css'
 
 const PaginationControls = ({ currentPage, totalPages, onPageChange }) => {
   return (
-    <div className="pagination-controls">
+    <div className="pagination">
       <button
         className="button"
         onClick={() => onPageChange('previous')}

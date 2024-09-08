@@ -1,4 +1,4 @@
-
+/* 
 .pagination-controls {
   display: flex;
   justify-content: flex-end;
@@ -30,4 +30,40 @@
 
 .pagination-controls span {
   font-size: 14px;
+} */
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 0;
+  position: fixed;
+  right: 50px;
+  bottom: 20px;  
+  padding: 8px 16px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin: 0 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 12px;
 }

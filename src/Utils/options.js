@@ -16,3 +16,9 @@ export const statusOptions = [
     'Residential'
   ];
   
+  export const reviewerCommentsOptions = [
+    'Installation pending',
+    'Documents verification in progress',
+    'Installation completed',
+    'KYC failed'
+  ]

@@ -6,25 +6,27 @@
   }
   
   .date-filter input {
-    padding: 10px;
+    padding: 5px 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .date-filter button {
-    padding: 10px 20px;
+    margin: 0 10px;
+    padding: 5px 10px;
     background-color: #009879;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: background-color 0.3s;
   }
   
   .date-filter button:hover {
     background-color: #007a66;
   }
-  
+  .date-filter-container input::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
