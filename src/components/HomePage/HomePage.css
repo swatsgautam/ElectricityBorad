@@ -1,0 +1,45 @@
+.homepage-container {
+    max-width: 100%;
+    padding: 10px;
+    margin: auto;
+  }
+  
+  .controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar-container {
+    flex: 1;
+  }
+  
+  .date-filter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .chart-div {
+    padding: 10px 0 20px;
+    text-align: right;
+  }
+  
+  .view-chart {
+    padding: 10px 20px;
+    background-color: #009879;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .view-chart:hover {
+    background-color: #1fab8f;
+  }
+  

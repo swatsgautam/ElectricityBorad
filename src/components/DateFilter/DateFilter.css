@@ -1,0 +1,30 @@
+
+.date-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .date-filter input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .date-filter button {
+    padding: 10px 20px;
+    background-color: #009879;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .date-filter button:hover {
+    background-color: #007a66;
+  }
+  
